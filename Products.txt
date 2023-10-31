@@ -1,0 +1,25 @@
+Products
+Name: Notebook
+Description: A notebook for all your writing needs
+Price: 70
+Is Active: true
+
+Name: Pen-Black Ink Pack
+Description: A pack black ink pens for the office.
+Price: 100
+Is Active: true
+
+Name: Folder -10 pieces
+Description: An item to store important papers.
+Price: 120
+Is Active: true
+
+Name: Bond Paper Pack
+Description: For printing and writing needs.
+Price: 300
+Is Active: true
+
+Name: Business Cards -200 pieces
+Description: To provide for your prospective clients about your business or profession. Special Orders only.
+Price: 400
+Is Active: false

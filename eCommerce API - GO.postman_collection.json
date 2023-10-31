@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "6a37b056-9918-4b7a-8dcf-d2627e78f6b4",
+		"name": "eCommerce API - GO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30178436"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"herring_kyle\",\r\n    \"email\": \"kyherring@mail.com\",\r\n    \"password\": \"24mleo-32.\", \r\n    \"isAdmin\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log In Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"matodd@mail.com\",\r\n    \"password\": \"qw214os\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjU3ZDI0YjZjNTNjZDM5OTc0OWY3YSIsImVtYWlsIjoibWFrcnVlZ2VyQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjk2OTcwNTE2fQ.HTKZr_AWfwnxqtIo6PeDDVsWw2-2CG-rU2gEg2ZKtCE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productName\": \"Business Cards -200 pieces\",\r\n    \"productDescription\": \"To provide for your prospective clients about your business or profession. Special Orders only.\",\r\n    \"productPrice\": 400,\r\n    \"productIsActive\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/products/add-product",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"add-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products/getproducts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"getproducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Active Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products/getactiveproducts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"getactiveproducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products/6527d2a436430b5e0c7e8659",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"6527d2a436430b5e0c7e8659"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjU3ZGJiYmYyOGFhZTlhNzI3M2I1NCIsImVtYWlsIjoia3loZXJyaW5nQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjk3MTI5MjIxfQ.I9beYuRd6T0jGn1f8DpeF6maMyDmfwBHgVU6YEoZ1tc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productName\":\"Notebook\",\r\n    \"productDescription\": \"A notebook for all your writing needs\",\r\n    \"productPrice\": 80\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/products/6527d28636430b5e0c7e8657",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"6527d28636430b5e0c7e8657"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Archive Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjU3ZGJiYmYyOGFhZTlhNzI3M2I1NCIsImVtYWlsIjoia3loZXJyaW5nQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjk3MTI5MjIxfQ.I9beYuRd6T0jGn1f8DpeF6maMyDmfwBHgVU6YEoZ1tc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products/6527d61c36430b5e0c7e865d/archive",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"6527d61c36430b5e0c7e865d",
+						"archive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjU3ZGJiYmYyOGFhZTlhNzI3M2I1NCIsImVtYWlsIjoia3loZXJyaW5nQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjk3MTI5MjIxfQ.I9beYuRd6T0jGn1f8DpeF6maMyDmfwBHgVU6YEoZ1tc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/products/6527d65f36430b5e0c7e865f/activate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"6527d65f36430b5e0c7e865f",
+						"activate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Checkout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjU0OTQyMGU2NTRlZjI1MGI3Yzc0NCIsImVtYWlsIjoibWF0b2RkQG1haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY5NzE0MTMwNX0.wAAjvlrmLjv2x-i-h8sTvnHzBaTONccfZPkat3XtjkI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"652549420e654ef250b7c744\",\r\n    \"productId\": \"6527d2a436430b5e0c7e8659\",\r\n    \"productQuantity\": 2,\r\n    \"orderTotalAmount\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/orders/checkout",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"orders",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Collect User Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjU0OTQyMGU2NTRlZjI1MGI3Yzc0NCIsImVtYWlsIjoibWF0b2RkQG1haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY5NzE0MTMwNX0.wAAjvlrmLjv2x-i-h8sTvnHzBaTONccfZPkat3XtjkI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/details",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"details"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

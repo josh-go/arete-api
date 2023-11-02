@@ -15,7 +15,7 @@ const orderRoutes = require("./routes/order")
 // Server setup
 const app = express();
 
-const port = 4007;
+const port =process.env.PORT || 4007;
 
 // Middleware
 app.use(express.json());
